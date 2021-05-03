@@ -1,0 +1,440 @@
+html{
+        display: flex;
+    }
+
+    * {
+        font-family: "ABeeZee";
+    }
+    
+    body {
+        margin: 0;
+        opacity: 0;
+        margin-top: 0;
+    }
+    
+    .main_background{
+        background-image: url("../imagens/main_image.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 970px;
+    }
+    
+    
+    .nome {
+        text-align: center;
+        font-size: 70px;
+        color: white;
+        padding-top: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 80px
+    }
+    
+    .infos {
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .sobremim{
+        background-color: rgb(2, 21, 39);
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .fotoperfil{
+        margin-left: 13%;
+        margin-right: 20px;
+        width: 150px;
+        border-radius: 50%;
+        transition: 0.5s;
+        float: left;
+        
+    }
+    
+    .fotoperfil:hover {
+        box-shadow: 0px 0px 10px 5px gray;
+    }
+    
+    .sobremim h3 {
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 50px;
+        font-size: 35px;
+        text-align: center;
+    }
+    
+    .sobremim p {
+        color: white;
+        font-size: 25px;
+        margin-left: 30%;
+        margin-right: auto;
+        width: 45%;
+        transition: 1s;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    
+    .contatoEbotao {
+        width: 150px;
+        display: block;
+        margin: auto;
+        text-align: center;
+        transition: 1s;
+        padding-top: 15px;
+    }
+    
+    .contatoEbotao:hover {
+        padding-top: 5px;
+    }
+    
+    .botao_contato {
+        display: inline;
+        background-color: rgb(2, 21, 39);
+        border: 5px outset white;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 1s;
+    }
+     
+    .contato {
+        color: white;
+        font-size: 15px;
+        display: block;
+        opacity: 0;
+        transition: 1s;
+    }
+    
+    .contatoEbotao:hover .contato{
+        opacity: 1;
+        padding-top: 30px;
+    }
+    
+    .habilidades {
+        padding-bottom: 50px;
+        background-color: rgba(176, 177, 177);
+    }
+    
+    .habilidades p {
+        color:  rgb(2, 21, 39);  
+        font-size: 25px;
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .habilidades h1 {
+        color:  rgb(2, 21, 39); 
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    
+    .container-for-skills {
+        margin-left: 70px;
+    }
+    
+    .container-for-skills:after {
+        background-color: inherit;
+        display: block;
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .skills_container {
+        width: 17%;
+        float: left;
+        background-color: rgba(176, 177, 177, 0.46);
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        transition: 1.3s;
+        border-radius: 25px;
+        position: relative;
+    }
+    
+    
+    .container_bar {
+        background-color: rgb(2, 21, 39);
+        width: 100%;
+        color: rgb(2, 21, 39);
+        border-radius: 20px;
+    }
+    
+   
+    .skill_bar_avancado {
+        width: 90%;
+        background-color: rgba(6, 191, 201, 0.62);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        border-radius: 20px;
+    }
+    
+    .skill_bar_basico {
+        width: 30%;
+        background-color: rgba(6, 191, 201, 0.62);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        border-radius: 20px;
+    }
+    
+    .skill_bar_intermediario {
+        width: 50%;
+        background-color: rgba(6, 191, 201, 0.62);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        border-radius: 20px;
+    }
+    
+    .skill_bar_nativo {
+        width: 95%;
+        background-color: rgba(6, 191, 201, 0.62);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        border-radius: 20px;
+    }
+    
+    .tooltip {
+        position: absolute;
+        width: 90px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        left: 63%;
+        bottom: 35%;
+        transition: 1.3s;
+        opacity: 0;
+        font-size: 12px;
+    }
+    
+    .tooltip::after {
+        content: "";
+        position: absolute;
+        top:  100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+    
+    .skills_container:hover {
+        box-shadow: 2px 2px 15px 15px rgba(0, 0, 0, 0.11);
+    }
+    
+    .skills_container:hover .tooltip {
+        opacity: 1; 
+    }
+    
+    .divisao_projetos{
+        background-color: rgb(2, 21, 39);
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-weight: bold;
+    }
+    
+    .divisao_projetos h1 {
+        color:  white;
+        font-size: 35px;
+        padding-bottom: 70px;
+        margin: 0px;
+    }
+    
+    .divisao_projetos p {
+        color: white;
+        font-size: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 45%;
+        transition: 1s;
+        text-align: justify;
+    }
+    
+    .container_projetos::after{
+        background-color: inherit;
+        display: block;
+        content: "";
+        display: table;
+        clear: both;
+    }
+   
+    .container_projetos a {
+        padding: 0;
+    }
+    
+    .container_projetos a:visited {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .container_projetos a:link {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .projeto_esquerda {
+        float: left;
+        margin-left: 15%;
+        width: 300px;
+        transition: 1.3s;
+        background-color: inherit; 
+    }
+    
+    .projeto_esquerda:hover{
+        box-shadow: 0px 0px 25px 0px black;
+    }
+    
+    
+    .projeto_direita {
+        float: right;
+        margin-right: 15%;
+        width: 300px;
+        transition: 1.3s;
+    }
+    
+    .projeto_direita:hover{
+        box-shadow: 0px 0px 25px 0px black;
+    }
+    
+    
+    .container_projetos p {
+        text-align: center;
+        font-size: 25px;
+        padding: 25px;
+        width: auto;
+        word-wrap: break-word;
+    }
+    
+    .container_projetos img {
+        border-bottom: 3px ridge white;
+        padding-bottom: 5px;
+    }
+    
+    .conteudo {
+        color: white;
+        padding: 2px 16px;
+        font-size: 20px;
+    }
+    
+    .divisao_contato{
+        background-color: rgba(176, 177, 177);
+        text-align: center;
+        padding: 50px;
+    }
+    
+   .divisao_contato p {
+        color:  rgb(2, 21, 39);  
+        font-size: 25px;
+        margin: 0px;
+       padding-bottom: 30px;
+    }
+    
+    .divisao_contato h1 {
+        color:  rgb(2, 21, 39); 
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+        padding: 25px;
+    }
+    
+    .divisao_contato i, a {
+        display: inline;
+        font-size: 30px;
+        color:  rgb(2, 21, 39);
+        text-decoration: none;
+        padding-left: 15px;
+        transition: 1s;
+    }
+    
+    i:hover{
+        color: rgba(1, 111, 116, 1);
+    }
+    
+    
+    /*-------------------Animações-----------------*/
+        
+    
+    body {
+        animation-name: fadein;
+        animation-duration: 1.2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes fadein {
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        body {
+            box-sizing: border-box;
+        }
+        
+        .main_background {
+            height: auto;
+            background-attachment: unset;
+        }
+        
+        .nome {
+            font-size: 35px;
+            padding-top: 100px;
+    }
+        .infos {
+            font-size: 25px;
+        }
+        
+        .fotoperfil {
+            margin-left: 33%;
+            float: none;
+        }
+        
+        .sobremim h3 {
+            margin-bottom: 0px
+        }
+        
+        .sobremim p {
+            text-align: center;
+            margin: auto;
+            padding-top: 35px;
+            width: 80%;
+            font-size: 22px;
+            padding-bottom: 20px;
+        }
+        
+        .skills_container {
+            width:inherit;
+            float: none;
+            padding-top: 1px;
+        }
+        
+        .projeto_esquerda {
+            margin-bottom: 70px;
+        }
+        
+        .divisao_contato h1 {
+            font-size: 30px;
+        }
+        
+        .container-for-skills {
+            margin-left: 0px;
+        }

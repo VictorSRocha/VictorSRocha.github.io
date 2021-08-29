@@ -406,6 +406,7 @@ html{
     }
     
     @media screen and (max-width: 600px) {
+        
         body {
             box-sizing: border-box;
         }
@@ -453,10 +454,13 @@ html{
         
         .container-for-skills {
             margin-left: 0px;
-        }
+        }   
     }
     
       @media screen and (min-width: 600px) {
+        body {
+            box-sizing: border-box;
+        }
         .fotoperfil {
             width: 150px;
             margin-left: auto;
@@ -488,7 +492,7 @@ html{
 
     @media screen and (min-width: 1200px) {
         .fotoperfil {
-            margin-left: 13%;
+            margin-left: 10%;
             margin-right: 20px;
             width: 150px;
             border-radius: 50%;
@@ -498,7 +502,7 @@ html{
         .sobremim p {
             color: white;
             font-size: 25px;
-            margin-left: 25%;
+            margin-left: auto;
             margin-right: auto;
             width: 45%;
             transition: 1s;
@@ -507,16 +511,23 @@ html{
         }
         .projeto {
             float: left;
-            margin-left: 9%;
-            width: 400px;
+            margin-left: 200px;
+            width: 500px;
             margin-bottom: 40px;
             background-color: inherit; 
             transform-style: preserve-3d;
          }
          .container_projetos img {
-            width: 70%;
+            width: 60%;
          }
          .skills_container {
-            width: 17%;
+            width: 22%;
+        }
+        .container-for-skills {
+            margin-left: 0px;
+        }
+        .container_projetos p {
+            top: 8px;
+            margin: 0px;
         }
     }

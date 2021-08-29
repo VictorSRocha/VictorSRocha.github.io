@@ -247,7 +247,6 @@ html{
         background-color: rgb(2, 21, 39);
         text-align: center;
         padding-top: 50px;
-        padding-bottom: 50px;
         font-weight: bold;
     }
     
@@ -268,6 +267,7 @@ html{
         text-align: justify;
     }
     
+
     .container_projetos::after{
         background-color: inherit;
         display: block;
@@ -290,31 +290,49 @@ html{
         text-decoration: none;
     }
     
-    .projeto_esquerda {
+    .projeto {
         float: left;
-        margin-left: 10%;
-        width: 300px;
-        transition: 1.3s;
+        margin-left: 9%;
+        width: 400px;
+        margin-bottom: 40px;
         background-color: inherit; 
+        transform-style: preserve-3d;
     }
     
-    .projeto_esquerda:hover{
-        box-shadow: 0px 0px 25px 0px black;
+    .proj_display{
+        opacity: 0;
+        display: none;
+    }
+
+    .sobre_projeto {
+        position: absolute;
+        top: -15px;
+        text-justify: auto;
+        transform: scaleX(-1);
+        opacity: 0;
+        padding: 40px;
     }
     
-    
-    .projeto_direita {
-        float: left;
-        margin-left: 16%;
-        margin-top: 2%;
-        width: 300px;
-        transition: 1.3s;
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        margin-top: 10px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        margin-bottom: 20px;
+      }
+
+    .active, .dot:hover {
+    background-color: #717171;
+    } 
+
+    .desativado {
+        background-color: #bbb;
     }
-    
-    .projeto_direita:hover{
-        box-shadow: 0px 0px 25px 0px black;
-    }
-    
     
     .container_projetos p {
         text-align: center;
@@ -326,9 +344,9 @@ html{
     
     .container_projetos img {
         border-bottom: 3px ridge white;
-        padding-bottom: 5px;
+        padding: 25px;
     }
-    
+
     .conteudo {
         color: white;
         padding: 2px 16px;
@@ -344,8 +362,9 @@ html{
    .divisao_contato p {
         color:  rgb(2, 21, 39);  
         font-size: 25px;
-        margin: 0px;
-       padding-bottom: 30px;
+        margin: auto;
+        padding-bottom: 30px;
+        text-align: center;
     }
     
     .divisao_contato h1 {
@@ -368,8 +387,8 @@ html{
     i:hover{
         color: rgba(1, 111, 116, 1);
     }
-    
-    
+
+
     /*-------------------Animações-----------------*/
         
     
@@ -386,7 +405,7 @@ html{
         }
     }
     
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 600px) {
         body {
             box-sizing: border-box;
         }
@@ -428,10 +447,6 @@ html{
             padding-top: 1px;
         }
         
-        .projeto_esquerda {
-            margin-bottom: 70px;
-        }
-        
         .divisao_contato h1 {
             font-size: 30px;
         }
@@ -439,3 +454,69 @@ html{
         .container-for-skills {
             margin-left: 0px;
         }
+    }
+    
+      @media screen and (min-width: 600px) {
+        .fotoperfil {
+            width: 150px;
+            margin-left: auto;
+            display: block;
+            margin-right: auto;
+            float: none;
+        }
+        .sobremim p {
+            text-align: center;
+            margin: auto;
+            padding-top: 50px;
+            width: 90%;
+            font-size: 22px;
+            padding-bottom: 20px;
+        }
+        .sobremim h3 {
+            padding-bottom: 0px;
+        }
+        .container-for-skills {
+            margin-left: 20px;
+        }
+        .skills_container {
+            width: 40%;
+        }
+        .projeto {
+           margin-left: 26%; 
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .fotoperfil {
+            margin-left: 13%;
+            margin-right: 20px;
+            width: 150px;
+            border-radius: 50%;
+            transition: 0.5s;
+            float: left;
+        }
+        .sobremim p {
+            color: white;
+            font-size: 25px;
+            margin-left: 25%;
+            margin-right: auto;
+            width: 45%;
+            transition: 1s;
+            text-align: justify;
+            line-height: 1.5;
+        }
+        .projeto {
+            float: left;
+            margin-left: 9%;
+            width: 400px;
+            margin-bottom: 40px;
+            background-color: inherit; 
+            transform-style: preserve-3d;
+         }
+         .container_projetos img {
+            width: 70%;
+         }
+         .skills_container {
+            width: 17%;
+        }
+    }

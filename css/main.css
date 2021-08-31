@@ -511,8 +511,8 @@ html{
         }
         .projeto {
             float: left;
-            margin-left: 60px;
-            width: 550px;
+            margin-left: 11%;
+            width: 350px;
             margin-bottom: 40px;
             background-color: inherit; 
             transform-style: preserve-3d;
@@ -520,6 +520,11 @@ html{
          .container_projetos img {
             width: 60%;
          }
+
+         .container_projetos p {
+            font-size: 18px;
+         }
+
          .skills_container {
             width: 22%;
         }

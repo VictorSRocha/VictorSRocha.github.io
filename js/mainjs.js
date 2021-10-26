@@ -1,5 +1,5 @@
 var disp_projetos = document.getElementsByClassName("proj_display");
-for (var i = 0; i < disp_projetos.length - 1; i++) {
+for (var i = 0; i < disp_projetos.length - 2; i++) {
     disp_projetos[i].style.display = 'block';
     disp_projetos[i].style.opacity = '1';
 }
@@ -18,52 +18,60 @@ function select_id(id) {
         dots[page].classList.toggle('desativado');
         dots[id].classList.toggle('desativado');
         if (window.getComputedStyle(projetos[3]).display === "none") {
-            for (var i = 0; i < projetos.length - 1; i++) {
+            for (var i = 0; i < projetos.length - 2; i++) {
             projetos[i].style.backfaceVisibility = "hidden";
             projetos[i].style.transform = 'rotateX(180deg)';
             projetos[i].style.transitionDuration = '1s';
             projetos[i].style.opacity = '0';
             }
             setTimeout(function change_project () {
-                for (var i = 0; i < projetos.length - 1; i++) {
+                for (var i = 0; i < projetos.length - 2; i++) {
                     projetos[i].style.display = 'none';
                 }
             }, 500);
             setTimeout(function change_project () {
                 projetos[3].style.display = 'block';
+                projetos[4].style.display = 'block';
             }, 500);
             setTimeout(function change_project () {
-                projetos[3].style.backfaceVisibility = "visible";
-                projetos[3].style.transitionDuration = '1s';
-                projetos[3].style.opacity = '1';
+                for (var i = 3; i < projetos.length; i++) {
+                    projetos[i].style.backfaceVisibility = "visible";
+                    projetos[i].style.transitionDuration = '1s';
+                    projetos[i].style.opacity = '1';
+                }
             }, 600);
             setTimeout(function change_project () {
                 projetos[3].style.transform = 'rotateX(180deg)';
+                projetos[4].style.transform = 'rotateX(180deg)';
             }, 600);
             setTimeout(function change_project () {
                 projetos[3].style.transform = 'rotateX(360deg)';
+                projetos[4].style.transform = 'rotateX(360deg)';
             }, 620);
         } else {
-            projetos[3].style.backfaceVisibility = "hidden";
-            projetos[3].style.transform = 'rotateX(180deg)';
-            projetos[3].style.transitionDuration = '1s';
-            projetos[3].style.opacity = '0';
+            for (var i = 3; i < projetos.length; i++) {
+                projetos[i].style.backfaceVisibility = "hidden";
+                projetos[i].style.transform = 'rotateX(180deg)';
+                projetos[i].style.transitionDuration = '1s';
+                projetos[i].style.opacity = '0';
+            }
             setTimeout(function change_project () {
                 projetos[3].style.display = 'none';
+                projetos[4].style.display = 'none';
             }, 500);
             setTimeout(function change_project () {
-                for (var i = 0; i < projetos.length - 1; i++) {
+                for (var i = 0; i < projetos.length - 2; i++) {
                     projetos[i].style.display = 'block';
                 }
             }, 500);
             setTimeout(function change_project () {
-                for (var i = 0; i < projetos.length - 1; i++) {
+                for (var i = 0; i < projetos.length - 2; i++) {
                     projetos[i].style.transform = 'rotateX(360deg)';
                     projetos[i].style.opacity = '1';
                 }
             }, 550);
             setTimeout(function change_project () {
-                for (var i = 0; i < projetos.length - 1; i++) {
+                for (var i = 0; i < projetos.length - 2; i++) {
                     projetos[i].style.backfaceVisibility = "visible";
                 }
             }, 600);

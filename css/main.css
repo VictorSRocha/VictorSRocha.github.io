@@ -293,7 +293,7 @@ html{
     .projeto {
         float: left;
         margin-left: 9%;
-        width: 400px;
+        width: 300px;
         margin-bottom: 40px;
         background-color: inherit; 
         transform-style: preserve-3d;
@@ -454,8 +454,14 @@ html{
         
         .container-for-skills {
             margin-left: 0px;
-        }   
+        }
+        
+        #email {
+            margin: 0px;
+        }
     }
+
+        
     
       @media screen and (min-width: 600px) {
         body {
@@ -511,7 +517,7 @@ html{
         }
         .projeto {
             float: left;
-            margin-left: 11%;
+            margin-left: 8%;
             width: 335px;
             margin-bottom: 40px;
             background-color: inherit; 
